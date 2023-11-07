@@ -78,7 +78,7 @@ void Parton_level()
     TH1D *h_forw_jet_PDG = new TH1D("h_forw_jet_PDG", "h_forw_jet_PDG", 100, 0, 10) ;
     TH1D *h_top_quark_M = new TH1D("h_top_quark_M", "h_top_quark_M", 100, 150, 200) ;
 
-TFile *f = new TFile("Parton_level_1.root");
+TFile *f = new TFile("Parton_level.root");
 
 TTree *LHEF = (TTree*)f->Get("LHEF");
 
