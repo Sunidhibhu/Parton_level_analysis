@@ -54,7 +54,7 @@ TH1D *Met_mass = new TH1D("MET_mass ", "MET_mass ", 40, -5, 5);
 TH1D *cutFlowHist = new TH1D("cutFlowHist", "Cut Flow", 10, 0, 200);
 
 
-TFile *f = new TFile("Detector_level_1.root");
+TFile *f = new TFile("Detector_level.root");
 
 TTree *Delphes1 = (TTree*)f->Get("Delphes");
 
