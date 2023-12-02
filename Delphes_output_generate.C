@@ -17,40 +17,44 @@ void Delphes_output_generate()
 
 
 TH1D *jet1_Pt = new TH1D("jet1_Pt ", "jet1_Pt ", 50, -1, 600);
-TH1D *jet1_Eta = new TH1D("jet1_Eta ", "jet1_Eta ", 30, -10, 10);
-TH1D *jet1_Phi = new TH1D("jet1_Phi ", "jet1_Phi ", 50, -6, 6);
+TH1D *jet1_Eta = new TH1D("jet1_Eta ", "jet1_Eta ", 30, -6, 6);
+TH1D *jet1_Phi = new TH1D("jet1_Phi ", "jet1_Phi ", 50, -4, 4);
 TH1D *forward_jet_mass = new TH1D("forward_jet_mass ", "forward_jet_mass ", 50, 0, 200);
 TH1D *jet2_Pt = new TH1D("jet2_Pt ", "jet2_Pt ", 50, 0, 400);
-TH1D *jet2_Eta = new TH1D("jet2_Eta ", "jet2_Eta ", 30, -5, 5);
+TH1D *jet2_Eta = new TH1D("jet2_Eta ", "jet2_Eta ", 30, -4, 4);
 TH1D *jet2_Phi = new TH1D("jet2_Phi ", "jet2_Phi ", 50, -4, 4);
 TH1D *jet2_mass = new TH1D("jet2_mass ", "jet2_mass ", 50, 0, 200);
 TH1D *jet3_Pt = new TH1D("jet3_Pt ", "jet3_Pt ", 50, 0, 400);
 TH1D *jet3_Eta = new TH1D("jet3_Eta ", "jet3_Eta ", 30, -4, 4);
-TH1D *jet3_Phi = new TH1D("jet3_Phi ", "jet3_Phi ", 50, -3, 3);
+TH1D *jet3_Phi = new TH1D("jet3_Phi ", "jet3_Phi ", 50, -4, 4);
 TH1D *jet3_mass = new TH1D("jet3_mass ", "jet3_mass ", 50, 0, 300);
 TH1D *jet4_Pt = new TH1D("jet4_Pt ", "jet4_Pt ", 50, 0, 300);
 TH1D *jet4_Eta = new TH1D("jet4_Eta ", "jet4_Eta ", 30, -5, 5);
 TH1D *jet4_Phi = new TH1D("jet4_Phi ", "jet4_Phi ", 50, -4, 4);
-TH1D *electron1_Pt = new TH1D("electron1_Pt ", "electron1_Pt ", 50, 0, 800);
-TH1D *electron1_Eta = new TH1D("electron1_Eta ", "electron1_Eta ", 50, -10, 10);
-TH1D *electron1_Phi = new TH1D("electron1_Phi ", "electron1_Phi ", 50, -8, 8);
-TH1D *electron2_Pt = new TH1D("electron2_Pt ", "electron2_Pt ", 50, 0, 800);
-TH1D *electron2_Eta = new TH1D("electron2_Eta ", "electron2_Eta ", 50, -10, 10);
-TH1D *electron2_Phi = new TH1D("electron2_Phi ", "electron2_Phi ", 50, -8,8);
-TH1D *electron3_Pt = new TH1D("electron3_Pt ", "electron3_Pt ", 50, 0, 800);
-TH1D *electron3_Eta = new TH1D("electron3_Eta ", "electron3_Eta ", 50, -10, 10);
-TH1D *electron3_Phi = new TH1D("electron3_Phi ", "electron3_Phi ", 50, -8, 8);
+TH1D *electron1_Pt = new TH1D("electron1_Pt ", "electron1_Pt ", 50, 0, 600);
+TH1D *electron1_Eta = new TH1D("electron1_Eta ", "electron1_Eta ", 50, -4, 4);
+TH1D *electron1_Phi = new TH1D("electron1_Phi ", "electron1_Phi ", 50, -4, 4);
+TH1D *electron2_Pt = new TH1D("electron2_Pt ", "electron2_Pt ", 50, 0, 600);
+TH1D *electron2_Eta = new TH1D("electron2_Eta ", "electron2_Eta ", 50, -4, 4);
+TH1D *electron2_Phi = new TH1D("electron2_Phi ", "electron2_Phi ", 50, -4,4);
+TH1D *electron3_Pt = new TH1D("electron3_Pt ", "electron3_Pt ", 50, 0, 600);
+TH1D *electron3_Eta = new TH1D("electron3_Eta ", "electron3_Eta ", 50, -4, 4);
+TH1D *electron3_Phi = new TH1D("electron3_Phi ", "electron3_Phi ", 50, -4, 4);
 TH1D *btag_mass = new TH1D("btag_mass ", "btag_mass ", 100, 0, 30);
 TH1D *btag_Pt = new TH1D("btag_Pt ", "btag_Pt ", 50, 0, 300);
 TH1D *btag_Eta = new TH1D("btag_Eta ", "btag_Eta ", 100, -5, 5);
 TH1D *btag_Phi = new TH1D("btag_Phi ", "btag_Phi ", 100, -5, 5);
-TH1D *top_mass = new TH1D("top_mass ", "top_mass ", 20, 30, 250);
+TH1D *balgo_Pt = new TH1D("balgo_Pt ", "balgo_Pt ", 50, 0, 300);
+TH1D *balgo_Eta = new TH1D("balgo_Eta ", "balgo_Eta ", 100, -5, 5);
+TH1D *balgo_Phi = new TH1D("balgo_Phi ", "balgo_Phi ", 100, -5, 5);
+//TH1D *top_mass = new TH1D("top_mass ", "top_mass ", 20, 30, 250);
+TH1D *top_pt = new TH1D("top_pt ", "top_pt ", 20, 30, 500);
 TH1D *W_mass = new TH1D("W_mass ", "W_mass ", 20, 30, 150);
 TH1D *Z_mass = new TH1D("Z_mass ", "Z_mass ", 20, 30, 150);
 TH1D *Met_met = new TH1D("Met_met  ", "Met_met  ", 50, 0, 400);
 TH1D *Met_Eta = new TH1D("Met_Eta ", "Met_Eta ", 50, -8, 8);
 TH1D *Met_Phi = new TH1D("Met_Phi ", "Met_Phi ", 40, -5, 5);
-TH1D *Met_mass = new TH1D("MET_mass ", "MET_mass ", 40, -5, 5);
+TH1D *Met_mass = new TH1D("MET_mass ", "MET_mass ", 40, -4, 4);
 TH1D *cutFlowHist = new TH1D("cutFlowHist", "Cut Flow", 10, 0, 200);
 
 
@@ -65,6 +69,7 @@ TTree *Delphes1 = (TTree*)f->Get("Delphes");
    Float_t         Jet_Phi[14];
    Float_t         Jet_Mass[14];
    UInt_t          Jet_BTag[14];
+   UInt_t          Jet_BTagAlgo[14];
    Int_t           Electron_size;
    Float_t         Electron_PT[4];
    Float_t         Electron_Eta[4];
@@ -88,6 +93,7 @@ TTree *Delphes1 = (TTree*)f->Get("Delphes");
    Delphes1->SetBranchAddress("Jet_size",&Jet_size);
    Delphes1->SetBranchAddress("Jet.Mass",Jet_Mass);
    Delphes1->SetBranchAddress("Jet.BTag",Jet_BTag);
+   Delphes1->SetBranchAddress("Jet.BTagAlgo",Jet_BTag);
    Delphes1->SetBranchAddress("Electron.PT",Electron_PT);
    Delphes1->SetBranchAddress("Electron.Eta",Electron_Eta);
    Delphes1->SetBranchAddress("Electron.Phi",Electron_Phi);
@@ -128,6 +134,7 @@ TLorentzVector normalJets3;
 
 
 int btag_index = -1;
+int balgo_index = -1;
 int normal_j1_index=-1;
 int normal_j2_index=-1;
 int normal_j3_index=-1;
@@ -140,7 +147,7 @@ for (int j = 0; j < Jet_size; j++)
     //cout<<"jjjjjj"<<j<<endl;
 	TLorentzVector Jet;
 	Jet.SetPtEtaPhiM(Jet_PT[j], Jet_Eta[j], Jet_Phi[j], Jet_Mass[j]);
-	if (Jet_BTag[j] == 1) 
+	if (Jet_BTag[j] == 1  ) 
 	{
     	//btag_Pt->Fill(Jet.Pt());
     	//btag_Eta->Fill(Jet.Eta());
@@ -148,17 +155,28 @@ for (int j = 0; j < Jet_size; j++)
    	//Jet = bTag;
    	int bj = j;
     	btag_index = bj;
-    	//bTag = Jet; 
+    	
+    	// btag_Pt ->Fill( Jet.Pt());
+        // btag_Eta ->Fill( Jet.Eta());
+        // btag_Phi->Fill(Jet.Phi()); 
+      //   break;
     	}
+    
+      
+    
     
 	//std::vector<JetInfo> Jet;
 	//Jet.push_back({j, Jet_PT[j]});
   
   	 if  (btag_index!=-1)
-  	 {    
+  	 { 
+  	 
+  	 if(Jet.Pt() > 25 )
+  	 {   
   	 btag_Pt ->Fill( Jet.Pt());
          btag_Eta ->Fill( Jet.Eta());
-         btag_Phi->Fill(Jet.Phi()); 
+         btag_Phi->Fill(Jet.Phi());
+         } 
   	 //leadingJets.push_back({j, Jet_PT[j]});
   	 }
 
@@ -173,22 +191,25 @@ for (int j = 0; j < Jet_size; j++)
  	
  	for (int i = 0; i < Jet_size; i++) 
 
+//cout << "Jet_Pt " << Jet_PT[i] << "\n";
  	{
         TLorentzVector Jet1;
         Jet1.SetPtEtaPhiM(Jet_PT[i], Jet_Eta[i], Jet_Phi[i], Jet_Mass[i]);
         {
-        if(i!=btag_index)
+        if(i!=btag_index && abs(Jet1.Eta()) > 2.5 && Jet1.Pt() > 30.0 && Jet1.E() > 300.0)
         {
         int Bi = i;
       //  normalJets1=Jet1;
         normal_j1_index= Bi;
     //    }
         
-        
+   //     if(abs(Jet1.Eta()) > 2.5 && Jet1.Pt() > 30.0 && Jet1.E() > 300.0)
+    //    {
         jet1_Pt->Fill(Jet1.Pt());
         jet1_Eta->Fill(Jet1.Eta());
         jet1_Phi->Fill(Jet1.Phi());
-        
+   //     }
+      //  break;
         }
         
         }
@@ -202,20 +223,23 @@ for (int j = 0; j < Jet_size; j++)
 
         Jet2.SetPtEtaPhiM(Jet_PT[k], Jet_Eta[k], Jet_Phi[k], Jet_Mass[k]);
         {
-        if(k!=btag_index && k!=normal_j1_index)
+        if(k!=btag_index && k!=normal_j1_index )
         {
         int Bk = k;
        // normalJets2=Jet2;
         normal_j2_index= Bk;
      //   }
+        if(Jet2.Pt() > 25 && abs(Jet2.Eta()) < 2.0 )
+        {
         jet2_Pt->Fill(Jet2.Pt());
         jet2_Eta->Fill(Jet2.Eta());
         jet2_Phi->Fill(Jet2.Phi());
-
+        }
+     // break;
         }
         
         }
-       // }
+        //}
         
         
         for (int l = 0; l < Jet_size; l++) 
@@ -225,27 +249,33 @@ for (int j = 0; j < Jet_size; j++)
 
         Jet3.SetPtEtaPhiM(Jet_PT[l], Jet_Eta[l], Jet_Phi[l], Jet_Mass[l]);
         {
-        if(l!=btag_index && l!=normal_j1_index && l!=normal_j2_index) 
+        if(l!=btag_index && l!=normal_j1_index && l!=normal_j2_index ) 
         {
         int Bl = l;
      //   normalJets3=Jet3;
         normal_j3_index= Bl;
      //   }
+        if(Jet3.Pt() > 25 && abs(Jet3.Eta()) < 2.0 )
+        {
         jet3_Pt->Fill(Jet3.Pt());
         jet3_Eta->Fill(Jet3.Eta());
         jet3_Phi->Fill(Jet3.Phi());
-        
+     //   break;
         }
     
         }
          TLorentzVector top;
          top = bTag + Jet2 + Jet3;
-         top_mass->Fill(top.M());
+       //  top_mass->Fill(top.M());
+       
+       if(top.Pt() > 30){
+         top_pt->Fill(top.Pt());
+         }
         }
         }
         }
         
-        
+        }
         
     //for (int k = j+1; k < Jet_size; k++) 
     //{
@@ -317,13 +347,18 @@ cout<<"normal jet pt"<<normalJets.Pt()<<endl;
         electron1.SetPtEtaPhiM(Electron_PT[i], Electron_Eta[i], Electron_Phi[i], Electron_PT[i]);
         {
         
+        //int Bi = i;
+       // normal_e1_index= Bi;
+    
+        if(electron1.Pt() > 20 && abs(electron1.Eta()) < 2.5 )
+        {
+        
         int Bi = i;
         normal_e1_index= Bi;
-   
         electron1_Pt->Fill(electron1.Pt());
         electron1_Eta->Fill(electron1.Eta());
         electron1_Phi->Fill(electron1.Phi());
-        
+        }
         }
         
     //    }
@@ -337,15 +372,18 @@ cout<<"normal jet pt"<<normalJets.Pt()<<endl;
 
         electron2.SetPtEtaPhiM(Electron_PT[k], Electron_Eta[k], Electron_Phi[k], Electron_PT[k]);
         {
-        if (k!=normal_e1_index)
+        if (k!=normal_e1_index && electron2.Pt() > 20.0 && abs(electron2.Eta()) < 2.5)
         {
         int Bk = k;
       
         normal_e2_index= Bk;
     
+      //  if(electron2.Pt() > 20.0 && abs(electron2.Eta()) < 2.5 )
+     //   {
         electron2_Pt->Fill(electron2.Pt());
         electron2_Eta->Fill(electron2.Eta());
         electron2_Phi->Fill(electron2.Phi());
+     //   }
 //cout <<"electron2_Eta= " <<  electron2_Eta->Integral() << "\n";
         }
         
@@ -360,15 +398,18 @@ cout<<"normal jet pt"<<normalJets.Pt()<<endl;
 
         electron3.SetPtEtaPhiM(Electron_PT[l], Electron_Eta[l], Electron_Phi[l],Electron_PT[l]);
         {
-        if( l!=normal_e1_index && l!=normal_e2_index) 
+        if( l!=normal_e1_index && l!=normal_e2_index && electron3.Pt() > 20.0 && abs(electron3.Eta()) < 2.5) 
         {
         int Bl = l;
      
         normal_e3_index= Bl;
      
+     //   if(electron3.Pt() > 20.0 && abs(electron3.Eta()) < 2.5 )
+     //   {
         electron3_Pt->Fill(electron3.Pt());
         electron3_Eta->Fill(electron3.Eta());
         electron3_Phi->Fill(electron3.Phi());
+     //   }
         
         }
     
@@ -400,9 +441,12 @@ cout<<"normal jet pt"<<normalJets.Pt()<<endl;
         int Bi = i;
         normal_m1_index= Bi;
    
+        if(Met.Pt() > 25)
+        {
         Met_met->Fill(Met.Pt());
         Met_Eta->Fill(Met.Eta());
         Met_Phi->Fill(Met.Phi());
+        }
         
         }
        
@@ -427,8 +471,8 @@ cout<<"normal jet pt"<<normalJets.Pt()<<endl;
   //  if(Jet_size == 3 && Electron_size == 3 && MissingET_size == 1 && b_Jets.size() == 1) {
     
   
-      
-   top_mass->Scale(1.0/top_mass->Integral());         
+ //  top_mass->Scale(1.0/top_mass->Integral());   
+   top_pt->Scale(1.0/top_pt->Integral());         
     W_mass->Scale(1.0/W_mass->Integral());  
     Z_mass->Scale(1.0/Z_mass->Integral() ) ; 
     btag_Pt->Scale(1.0/btag_Pt->Integral() );  
@@ -458,13 +502,16 @@ cout<<"normal jet pt"<<normalJets.Pt()<<endl;
     Met_Phi->Scale(1.0/Met_Phi->Integral() )   ;
     
      
-    
-     top_mass->Write();         
+  //  top_mass->Write(); 
+    top_pt->Write();         
     W_mass->Write();
     Z_mass->Write();
     btag_Pt->Write();
     btag_Eta->Write();
     btag_Phi->Write(); 
+    balgo_Pt->Write();
+    balgo_Eta->Write();
+    balgo_Phi->Write(); 
      
   
    
@@ -522,8 +569,8 @@ cout<<"normal jet pt"<<normalJets.Pt()<<endl;
 
 TCanvas *c1 = new TCanvas();
 
-top_mass ->Draw();
-c1->SaveAs("top_mass.png");
+top_pt ->Draw();
+c1->SaveAs("top_pt.png");
 
 
 TCanvas *c2 = new TCanvas();
@@ -659,7 +706,20 @@ TCanvas *c27 = new TCanvas();
 Met_Phi ->Draw();
 c27->SaveAs("Met_Phi.png");
 
+/*TCanvas *c28 = new TCanvas();
 
+balgo_Pt ->Draw();
+c28->SaveAs("balgo_Pt.png");
+
+TCanvas *c29 = new TCanvas();
+
+balgo_Eta ->Draw();
+c29->SaveAs("balgo_Eta.png");
+
+TCanvas *c30 = new TCanvas();
+
+balgo_Phi ->Draw();
+c30->SaveAs("balgo_Phi.png");*/
 
 f->Close();
 
