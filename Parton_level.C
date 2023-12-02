@@ -55,16 +55,16 @@ void Parton_level()
     TH1D *h_lepton1_Eta = new TH1D("h_lepton1_Eta", "h_lepton1_Eta", 50, -10, 10) ;
     TH1D *h_lepton1_Phi = new TH1D("h_lepton1_Phi", "h_lepton1_Phi", 50, -8, 8) ;
     TH1D *h_lepton2_Pt = new TH1D ("h_lepton2_Pt", "h_lepton2_Pt", 50, 0, 800) ;
-    TH1D *h_lepton2_Eta = new TH1D("h_lepton2_Eta", "h_lepton2_Eta", 50, -10, 10) ;
-    TH1D *h_lepton2_Phi = new TH1D("h_lepton2_Phi", "h_lepton2_Phi", 50, -8, 8) ;
+    TH1D *h_lepton2_Eta = new TH1D("h_lepton2_Eta", "h_lepton2_Eta", 50, -6, 6) ;
+    TH1D *h_lepton2_Phi = new TH1D("h_lepton2_Phi", "h_lepton2_Phi", 50, -6, 6) ;
     TH1D *h_lepton3_Pt = new TH1D ("h_lepton3_Pt", "h_lepton3_Pt", 50, 0, 800) ;
-    TH1D *h_lepton3_Eta = new TH1D("h_lepton3_Eta", "h_lepton3_Eta", 50, -10, 10) ;
-    TH1D *h_lepton3_Phi = new TH1D("h_lepton3_Phi", "h_lepton3_Phi", 50, -8, 8) ;
+    TH1D *h_lepton3_Eta = new TH1D("h_lepton3_Eta", "h_lepton3_Eta", 50, -6, 6) ;
+    TH1D *h_lepton3_Phi = new TH1D("h_lepton3_Phi", "h_lepton3_Phi", 50, -6, 6) ;
     TH1D *h_quarks1_Pt = new TH1D("h_quarks1_Pt", "h_quarks1_Pt", 50, 0, 400) ;
     TH1D *h_quarks1_Eta = new TH1D("h_quarks1_Eta", "h_quarks1_Eta", 50, -5, 5) ;
     TH1D *h_quarks1_Phi = new TH1D("h_quarks1_Phi", "h_quarks1_Phi", 50, -4, 4) ;
     TH1D *h_quarks2_Pt = new TH1D("h_quarks2_Pt", "h_quarks2_Pt", 50, 0, 400) ;
-    TH1D *h_quarks2_Eta = new TH1D("h_quarks2_Eta", "h_quarks2_Eta", 50, -4, 4) ;
+    TH1D *h_quarks2_Eta = new TH1D("h_quarks2_Eta", "h_quarks2_Eta", 50, -6, 6) ;
     TH1D *h_quarks2_Phi = new TH1D("h_quarks2_Phi", "h_quarks2_Phi", 50, -6, 6) ;
     TH1D *h_b_quark_Pt = new TH1D("h_b_quark_Pt", "h_b_quark_Pt", 50, 0, 300) ;
     TH1D *h_b_quark_Eta = new TH1D("h_b_quark_Eta", "h_b_quark_Eta", 50, -5, 5) ;
@@ -73,12 +73,12 @@ void Parton_level()
     TH1D *h_MET_Eta = new TH1D("h_MET_Eta", "h_MET_Eta", 50, -8, 8) ;
     TH1D *h_MET_Phi = new TH1D("h_MET_Phi", "h_MET_Phi", 50, -5, 5) ;
     TH1D *h_forw_jet_Pt = new TH1D("h_forw_jet_Pt", "h_forw_jet_Pt", 50, 0, 600) ;
-    TH1D *h_forw_jet_Eta = new TH1D("h_forw_jet_Eta", "h_forw_jet_Eta", 50, -10, 10) ;
+    TH1D *h_forw_jet_Eta = new TH1D("h_forw_jet_Eta", "h_forw_jet_Eta", 50, -8, 8) ;
     TH1D *h_forw_jet_Phi = new TH1D("h_forw_jet_Phi", "h_forw_jet_Phi", 50, -6, 6) ;
     TH1D *h_forw_jet_PDG = new TH1D("h_forw_jet_PDG", "h_forw_jet_PDG", 100, 0, 10) ;
     TH1D *h_top_quark_M = new TH1D("h_top_quark_M", "h_top_quark_M", 100, 150, 200) ;
 
-TFile *f = new TFile("Parton_level.root");
+TFile *f = new TFile("Parton_level_1.root");
 
 TTree *LHEF = (TTree*)f->Get("LHEF");
 
@@ -119,9 +119,9 @@ TTree *LHEF = (TTree*)f->Get("LHEF");
 Int_t nentries = (Int_t)LHEF->GetEntries(); 
 
 
-for (Int_t i = 0; i < nentries; i++) {
+//for (Int_t i = 0; i < nentries; i++) {
 
-//for (Int_t i = 0; i < 1000; i++) {
+for (Int_t i = 0; i < 10000; i++) {
 cout<< i << "\n" ;
 
 LHEF->GetEntry(i);
@@ -422,7 +422,7 @@ h_Particle_E->Fill(Particle_E[j]);
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-         if (isWboson1 )
+         if (isWboson1  && lepton1.Pt() > 20 && abs(lepton1.Eta()) < 2.5)
          {
          h_lepton1_Pt->Fill (lepton1.Pt()) ;
          h_lepton1_Eta->Fill (lepton1.Eta()) ;
@@ -431,7 +431,7 @@ h_Particle_E->Fill(Particle_E[j]);
          }
          
          
-         if (isZboson)
+         if (isZboson && lepton2.Pt() > 20 && abs(lepton2.Eta()) < 2.5 && lepton3.Pt() > 20 && abs(lepton3.Eta()) < 2.5)
          {
          h_lepton2_Pt->Fill (lepton2.Pt()) ;
          h_lepton2_Eta->Fill (lepton2.Eta()) ;
@@ -443,15 +443,15 @@ h_Particle_E->Fill(Particle_E[j]);
          }        
          
           
-         
+         if(quark0.Pt() > 30 && abs(quark0.Eta()) > 2.5 && quark0.E() > 300 ){
          h_forw_jet_Pt->Fill (quark0.Pt()) ;
          h_forw_jet_Eta->Fill (quark0.Eta()) ;
          h_forw_jet_Phi->Fill (quark0.Phi()) ;
       //   h_forw_jet_PDG->Fill (abs (Particle_PID[quarks.at (0)]) ) ;
        //  h_left_over_quarks.Fill (quark0.size());
-          
+          }
          
-         if (isWboson2 )
+         if (isWboson2 && quark1.Pt() > 25 && abs(quark1.Eta()) < 2.5 && quark2.Pt() > 25 && abs(quark2.Eta()) < 2.5)
          {
          h_quarks1_Pt->Fill (quark1.Pt()) ;
          h_quarks1_Eta->Fill (quark1.Eta()) ;
@@ -461,7 +461,7 @@ h_Particle_E->Fill(Particle_E[j]);
          h_quarks2_Phi->Fill (quark2.Phi()) ;
          }            
          
-         if (isb_quark )
+         if (isb_quark && b_quark.Pt() > 25)
          {
          h_b_quark_Pt->Fill (b_quark.Pt()) ;
          h_b_quark_Eta->Fill (b_quark.Eta()) ;
@@ -469,7 +469,7 @@ h_Particle_E->Fill(Particle_E[j]);
          
          }
          
-         if (isMET )
+         if (isMET && Met.Pt() > 25)
          {
          h_MET_Pt->Fill (Met.Pt()) ;
          h_MET_Eta->Fill (Met.Eta()) ;
